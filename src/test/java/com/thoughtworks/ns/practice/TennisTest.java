@@ -78,13 +78,14 @@ public class TennisTest {
             if (i < this.player2Score)
                 game.wonPoint(PLAYER2_NAME);
         }
-        assertEquals(this.expectedScore, game.getScore());
+        assertEquals(this.expectedScore, game.calculateScore());
     }
 
     @Test
     public void checkAllScoresOfUglyTennisGame() {
-        UglyTennisGame game = new UglyTennisGame(PLAYER1_NAME, PLAYER2_NAME);
+        TennisGameImp game = new TennisGameImp(PLAYER1_NAME, PLAYER2_NAME);
         checkAllScores(game);
+
     }
 }
 
